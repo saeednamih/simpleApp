@@ -42031,7 +42031,75 @@ var _ToggleButtonGroup2 = _interopRequireDefault(require("./ToggleButtonGroup"))
 var _Tooltip2 = _interopRequireDefault(require("./Tooltip"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Accordion":"node_modules/react-bootstrap/es/Accordion.js","./Alert":"node_modules/react-bootstrap/es/Alert.js","./Badge":"node_modules/react-bootstrap/es/Badge.js","./Breadcrumb":"node_modules/react-bootstrap/es/Breadcrumb.js","./BreadcrumbItem":"node_modules/react-bootstrap/es/BreadcrumbItem.js","./Button":"node_modules/react-bootstrap/es/Button.js","./ButtonGroup":"node_modules/react-bootstrap/es/ButtonGroup.js","./ButtonToolbar":"node_modules/react-bootstrap/es/ButtonToolbar.js","./Card":"node_modules/react-bootstrap/es/Card.js","./CardColumns":"node_modules/react-bootstrap/es/CardColumns.js","./CardDeck":"node_modules/react-bootstrap/es/CardDeck.js","./CardImg":"node_modules/react-bootstrap/es/CardImg.js","./CardGroup":"node_modules/react-bootstrap/es/CardGroup.js","./Carousel":"node_modules/react-bootstrap/es/Carousel.js","./CarouselItem":"node_modules/react-bootstrap/es/CarouselItem.js","./CloseButton":"node_modules/react-bootstrap/es/CloseButton.js","./Col":"node_modules/react-bootstrap/es/Col.js","./Collapse":"node_modules/react-bootstrap/es/Collapse.js","./Dropdown":"node_modules/react-bootstrap/es/Dropdown.js","./DropdownButton":"node_modules/react-bootstrap/es/DropdownButton.js","./DropdownItem":"node_modules/react-bootstrap/es/DropdownItem.js","./Fade":"node_modules/react-bootstrap/es/Fade.js","./Form":"node_modules/react-bootstrap/es/Form.js","./FormControl":"node_modules/react-bootstrap/es/FormControl.js","./FormCheck":"node_modules/react-bootstrap/es/FormCheck.js","./FormGroup":"node_modules/react-bootstrap/es/FormGroup.js","./FormLabel":"node_modules/react-bootstrap/es/FormLabel.js","./FormText":"node_modules/react-bootstrap/es/FormText.js","./Container":"node_modules/react-bootstrap/es/Container.js","./Image":"node_modules/react-bootstrap/es/Image.js","./Figure":"node_modules/react-bootstrap/es/Figure.js","./InputGroup":"node_modules/react-bootstrap/es/InputGroup.js","./Jumbotron":"node_modules/react-bootstrap/es/Jumbotron.js","./ListGroup":"node_modules/react-bootstrap/es/ListGroup.js","./ListGroupItem":"node_modules/react-bootstrap/es/ListGroupItem.js","./Media":"node_modules/react-bootstrap/es/Media.js","./Modal":"node_modules/react-bootstrap/es/Modal.js","./ModalBody":"node_modules/react-bootstrap/es/ModalBody.js","./ModalDialog":"node_modules/react-bootstrap/es/ModalDialog.js","./ModalFooter":"node_modules/react-bootstrap/es/ModalFooter.js","./ModalTitle":"node_modules/react-bootstrap/es/ModalTitle.js","./Nav":"node_modules/react-bootstrap/es/Nav.js","./Navbar":"node_modules/react-bootstrap/es/Navbar.js","./NavbarBrand":"node_modules/react-bootstrap/es/NavbarBrand.js","./NavDropdown":"node_modules/react-bootstrap/es/NavDropdown.js","./NavItem":"node_modules/react-bootstrap/es/NavItem.js","./Overlay":"node_modules/react-bootstrap/es/Overlay.js","./OverlayTrigger":"node_modules/react-bootstrap/es/OverlayTrigger.js","./PageItem":"node_modules/react-bootstrap/es/PageItem.js","./Pagination":"node_modules/react-bootstrap/es/Pagination.js","./Popover":"node_modules/react-bootstrap/es/Popover.js","./ProgressBar":"node_modules/react-bootstrap/es/ProgressBar.js","./ResponsiveEmbed":"node_modules/react-bootstrap/es/ResponsiveEmbed.js","./Row":"node_modules/react-bootstrap/es/Row.js","./SafeAnchor":"node_modules/react-bootstrap/es/SafeAnchor.js","./Spinner":"node_modules/react-bootstrap/es/Spinner.js","./SplitButton":"node_modules/react-bootstrap/es/SplitButton.js","./Tab":"node_modules/react-bootstrap/es/Tab.js","./TabContainer":"node_modules/react-bootstrap/es/TabContainer.js","./TabContent":"node_modules/react-bootstrap/es/TabContent.js","./Table":"node_modules/react-bootstrap/es/Table.js","./TabPane":"node_modules/react-bootstrap/es/TabPane.js","./Tabs":"node_modules/react-bootstrap/es/Tabs.js","./ThemeProvider":"node_modules/react-bootstrap/es/ThemeProvider.js","./ToggleButton":"node_modules/react-bootstrap/es/ToggleButton.js","./ToggleButtonGroup":"node_modules/react-bootstrap/es/ToggleButtonGroup.js","./Tooltip":"node_modules/react-bootstrap/es/Tooltip.js"}],"App.js":[function(require,module,exports) {
+},{"./Accordion":"node_modules/react-bootstrap/es/Accordion.js","./Alert":"node_modules/react-bootstrap/es/Alert.js","./Badge":"node_modules/react-bootstrap/es/Badge.js","./Breadcrumb":"node_modules/react-bootstrap/es/Breadcrumb.js","./BreadcrumbItem":"node_modules/react-bootstrap/es/BreadcrumbItem.js","./Button":"node_modules/react-bootstrap/es/Button.js","./ButtonGroup":"node_modules/react-bootstrap/es/ButtonGroup.js","./ButtonToolbar":"node_modules/react-bootstrap/es/ButtonToolbar.js","./Card":"node_modules/react-bootstrap/es/Card.js","./CardColumns":"node_modules/react-bootstrap/es/CardColumns.js","./CardDeck":"node_modules/react-bootstrap/es/CardDeck.js","./CardImg":"node_modules/react-bootstrap/es/CardImg.js","./CardGroup":"node_modules/react-bootstrap/es/CardGroup.js","./Carousel":"node_modules/react-bootstrap/es/Carousel.js","./CarouselItem":"node_modules/react-bootstrap/es/CarouselItem.js","./CloseButton":"node_modules/react-bootstrap/es/CloseButton.js","./Col":"node_modules/react-bootstrap/es/Col.js","./Collapse":"node_modules/react-bootstrap/es/Collapse.js","./Dropdown":"node_modules/react-bootstrap/es/Dropdown.js","./DropdownButton":"node_modules/react-bootstrap/es/DropdownButton.js","./DropdownItem":"node_modules/react-bootstrap/es/DropdownItem.js","./Fade":"node_modules/react-bootstrap/es/Fade.js","./Form":"node_modules/react-bootstrap/es/Form.js","./FormControl":"node_modules/react-bootstrap/es/FormControl.js","./FormCheck":"node_modules/react-bootstrap/es/FormCheck.js","./FormGroup":"node_modules/react-bootstrap/es/FormGroup.js","./FormLabel":"node_modules/react-bootstrap/es/FormLabel.js","./FormText":"node_modules/react-bootstrap/es/FormText.js","./Container":"node_modules/react-bootstrap/es/Container.js","./Image":"node_modules/react-bootstrap/es/Image.js","./Figure":"node_modules/react-bootstrap/es/Figure.js","./InputGroup":"node_modules/react-bootstrap/es/InputGroup.js","./Jumbotron":"node_modules/react-bootstrap/es/Jumbotron.js","./ListGroup":"node_modules/react-bootstrap/es/ListGroup.js","./ListGroupItem":"node_modules/react-bootstrap/es/ListGroupItem.js","./Media":"node_modules/react-bootstrap/es/Media.js","./Modal":"node_modules/react-bootstrap/es/Modal.js","./ModalBody":"node_modules/react-bootstrap/es/ModalBody.js","./ModalDialog":"node_modules/react-bootstrap/es/ModalDialog.js","./ModalFooter":"node_modules/react-bootstrap/es/ModalFooter.js","./ModalTitle":"node_modules/react-bootstrap/es/ModalTitle.js","./Nav":"node_modules/react-bootstrap/es/Nav.js","./Navbar":"node_modules/react-bootstrap/es/Navbar.js","./NavbarBrand":"node_modules/react-bootstrap/es/NavbarBrand.js","./NavDropdown":"node_modules/react-bootstrap/es/NavDropdown.js","./NavItem":"node_modules/react-bootstrap/es/NavItem.js","./Overlay":"node_modules/react-bootstrap/es/Overlay.js","./OverlayTrigger":"node_modules/react-bootstrap/es/OverlayTrigger.js","./PageItem":"node_modules/react-bootstrap/es/PageItem.js","./Pagination":"node_modules/react-bootstrap/es/Pagination.js","./Popover":"node_modules/react-bootstrap/es/Popover.js","./ProgressBar":"node_modules/react-bootstrap/es/ProgressBar.js","./ResponsiveEmbed":"node_modules/react-bootstrap/es/ResponsiveEmbed.js","./Row":"node_modules/react-bootstrap/es/Row.js","./SafeAnchor":"node_modules/react-bootstrap/es/SafeAnchor.js","./Spinner":"node_modules/react-bootstrap/es/Spinner.js","./SplitButton":"node_modules/react-bootstrap/es/SplitButton.js","./Tab":"node_modules/react-bootstrap/es/Tab.js","./TabContainer":"node_modules/react-bootstrap/es/TabContainer.js","./TabContent":"node_modules/react-bootstrap/es/TabContent.js","./Table":"node_modules/react-bootstrap/es/Table.js","./TabPane":"node_modules/react-bootstrap/es/TabPane.js","./Tabs":"node_modules/react-bootstrap/es/Tabs.js","./ThemeProvider":"node_modules/react-bootstrap/es/ThemeProvider.js","./ToggleButton":"node_modules/react-bootstrap/es/ToggleButton.js","./ToggleButtonGroup":"node_modules/react-bootstrap/es/ToggleButtonGroup.js","./Tooltip":"node_modules/react-bootstrap/es/Tooltip.js"}],"validator.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.field = void 0;
+
+var field = function field(_ref) {
+  var _ref$value = _ref.value,
+      value = _ref$value === void 0 ? '' : _ref$value,
+      name = _ref.name,
+      _ref$isRequired = _ref.isRequired,
+      isRequired = _ref$isRequired === void 0 ? true : _ref$isRequired,
+      _ref$minLength = _ref.minLength,
+      minLength = _ref$minLength === void 0 ? 0 : _ref$minLength,
+      _ref$pattern = _ref.pattern,
+      pattern = _ref$pattern === void 0 ? '' : _ref$pattern;
+  var settings = {
+    value: value,
+    name: name,
+    errors: [],
+    validations: {}
+  };
+
+  if (isRequired) {
+    settings.validations.isRequired = true;
+  }
+
+  if (minLength > 0) {
+    settings.validations.minLength = minLength;
+  }
+
+  if (pattern) {
+    settings.validations.pattern = pattern;
+  }
+
+  return settings;
+};
+
+exports.field = field;
+
+var _default = function _default(value, name, validations) {
+  var valid = true,
+      errors = [];
+
+  if (validations.isRequired && !value.trim()) {
+    valid = false;
+    errors.push("".concat(name, " is required"));
+  }
+
+  if (validations.minLength && value.length < validations.minLength) {
+    valid = false;
+    errors.push("".concat(name, " should be no less than ").concat(validations.minLength, " characters"));
+  }
+
+  if (validations.pattern && !validations.pattern.test(value)) {
+    valid = false;
+    errors.push("Invalid ".concat(name));
+  }
+
+  return {
+    valid: valid,
+    errors: errors
+  };
+};
+
+exports.default = _default;
+},{}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -42045,11 +42113,17 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _reactBootstrap = require("react-bootstrap");
 
+var _validator2 = _interopRequireWildcard(require("./validator"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -42059,26 +42133,84 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+//phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 var App =
 /*#__PURE__*/
 function (_Component) {
   _inherits(App, _Component);
 
   function App() {
+    var _this;
+
     _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(App).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this));
+    _this.state = {
+      Name: (0, _validator2.field)({
+        value: '',
+        name: 'Name',
+        minLength: 2
+      }),
+      CellularPhone: (0, _validator2.field)({
+        value: '',
+        name: 'CellularPhone',
+        pattern: /^\(?([0-9]{3})\)?[-]?([0-9]{3})[-. ]?([0-9]{4})$/
+      }),
+      HowDidYouReachedUs: (0, _validator2.field)({
+        value: '',
+        name: 'HowDidYouReachedUs'
+      })
+    };
+    _this.onInputChange = _this.onInputChange.bind(_assertThisInitialized(_this));
+    _this.onSubmit = _this.onSubmit.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(App, [{
+    key: "onInputChange",
+    value: function onInputChange(_ref) {
+      var _ref$target = _ref.target,
+          name = _ref$target.name,
+          value = _ref$target.value;
+      console.log(name, value);
+      this.setState(_defineProperty({}, name, _objectSpread({}, this.state[name], {
+        value: value
+      }, (0, _validator2.default)(value, name, this.state[name].validations))));
+    }
+  }, {
+    key: "onSubmit",
+    value: function onSubmit(e) {
+      var student = Object.assign({}, this.state);
+
+      for (var key in student) {
+        var _student$key = student[key],
+            value = _student$key.value,
+            validations = _student$key.validations;
+
+        var _validator = (0, _validator2.default)(value, key, validations),
+            valid = _validator.valid,
+            errors = _validator.errors;
+
+        if (!valid) {
+          student[key].valid = valid;
+          student[key].errors = errors;
+        }
+      }
+
+      this.setState(_objectSpread({}, student)); //Send data to somewhere 
+      //...
+
+      e.preventDefault();
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, {
@@ -42094,16 +42226,30 @@ function (_Component) {
         className: "mb-3"
       }, _react.default.createElement(_reactBootstrap.InputGroup.Prepend, null, _react.default.createElement(_reactBootstrap.InputGroup.Text, null)), _react.default.createElement(_reactBootstrap.Form.Control, {
         name: "Name",
-        placeholder: "Enter your Name  "
-      }))))), _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, null, _react.default.createElement(_reactBootstrap.Form.Group, {
+        placeholder: "Enter your Nam",
+        defaultValue: this.state.Name.value,
+        onBlur: this.onInputChange
+      })), this.state.Name.errors.map(function (err, i) {
+        return _react.default.createElement(_reactBootstrap.Form.Text, {
+          key: i,
+          className: "text-danger"
+        }, err);
+      })))), _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, null, _react.default.createElement(_reactBootstrap.Form.Group, {
         controlId: "formControlCellularPhone"
       }, _react.default.createElement(_reactBootstrap.Form.Label, null, "Cellular Phone"), _react.default.createElement(_reactBootstrap.InputGroup, {
         className: "mb-3"
       }, _react.default.createElement(_reactBootstrap.InputGroup.Prepend, null, _react.default.createElement(_reactBootstrap.InputGroup.Text, null)), _react.default.createElement(_reactBootstrap.Form.Control, {
         name: "CellularPhone",
         placeholder: "Enter your CellularPhone",
-        "aria-label": "CellularPhone"
-      }))))), _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, {
+        "aria-label": "CellularPhone",
+        defaultValue: this.state.CellularPhone.value,
+        onBlur: this.onInputChange
+      })), this.state.CellularPhone.errors.map(function (err, i) {
+        return _react.default.createElement(_reactBootstrap.Form.Text, {
+          key: i,
+          className: "text-danger"
+        }, err);
+      })))), _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, {
         md: {
           span: 10
         }
@@ -42113,7 +42259,9 @@ function (_Component) {
         className: "mb-3"
       }, _react.default.createElement(_reactBootstrap.InputGroup.Prepend, null, _react.default.createElement(_reactBootstrap.InputGroup.Text, null)), _react.default.createElement(_reactBootstrap.Form.Control, {
         as: "select",
-        name: "HowDidYouReachedUs"
+        name: "HowDidYouReachedUs",
+        defaultValue: this.state.HowDidYouReachedUs.value,
+        onBlur: this.onInputChange
       }, _react.default.createElement("option", {
         value: ""
       }, "Select "), _react.default.createElement("option", {
@@ -42124,7 +42272,12 @@ function (_Component) {
         value: "Friends"
       }, "Friends"), _react.default.createElement("option", {
         value: "Social Media"
-      }, "SocialMedia")))))), _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Button, {
+      }, "SocialMedia")))), this.state.HowDidYouReachedUs.errors.map(function (err, i) {
+        return _react.default.createElement(_reactBootstrap.Form.Text, {
+          key: i,
+          className: "text-danger"
+        }, err);
+      }))), _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Button, {
         variant: "primary",
         type: "submit"
       }, "Submit"))))));
@@ -42137,7 +42290,7 @@ function (_Component) {
 exports.default = App;
 
 _reactDom.default.render(_react.default.createElement(App, null), document.querySelector("#simpleApp"));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-bootstrap":"node_modules/react-bootstrap/es/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-bootstrap":"node_modules/react-bootstrap/es/index.js","./validator":"validator.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -42165,7 +42318,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54171" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56850" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

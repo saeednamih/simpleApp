@@ -1,0 +1,29 @@
+{
+  "name": "simpleapp",
+  "version": "1.0.0",
+  "description": "simpleApp",
+  "main": "App.js",
+  "scripts": {
+    "start": "parcel index.html -p 3001", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saeednamih/simpleApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saeednamih/simpleApp/issues"
+  },
+  "homepage": "https://github.com/saeednamih/simpleApp#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-dom": "^16.8.6"
+  }
+}

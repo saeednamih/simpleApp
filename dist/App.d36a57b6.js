@@ -42099,7 +42099,74 @@ var _default = function _default(value, name, validations) {
 };
 
 exports.default = _default;
-},{}],"App.js":[function(require,module,exports) {
+},{}],"summaryComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactBootstrap = require("react-bootstrap");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var SummaryComponent =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(SummaryComponent, _React$Component);
+
+  function SummaryComponent() {
+    _classCallCheck(this, SummaryComponent);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(SummaryComponent).call(this));
+  }
+
+  _createClass(SummaryComponent, [{
+    key: "render",
+    value: function render() {
+      // const {title,catagory,date,where}=this.props.event
+      return _react.default.createElement(_reactBootstrap.Container, null, _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, null), _react.default.createElement(_reactBootstrap.Col, null, _react.default.createElement("h2", null, "show  contact ")), _react.default.createElement(_reactBootstrap.Col, null)), _react.default.createElement(_reactBootstrap.Row, null, _react.default.createElement(_reactBootstrap.Col, {
+        md: {
+          span: 6,
+          offset: 3
+        }
+      }, _react.default.createElement(_reactBootstrap.Card, {
+        style: {
+          width: '18rem'
+        }
+      }, _react.default.createElement(_reactBootstrap.ListGroup, {
+        variant: "flush"
+      }, _react.default.createElement(_reactBootstrap.ListGroup.Item, null, "name : ", this.props.Name), _react.default.createElement(_reactBootstrap.ListGroup.Item, null, "Cellular Phone : ", this.props.CellularPhone), _react.default.createElement(_reactBootstrap.ListGroup.Item, null, " How Did You Reached Us:", this.props.HowDidYouReachedUs))))));
+    }
+  }]);
+
+  return SummaryComponent;
+}(_react.default.Component);
+
+var _default = SummaryComponent;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-bootstrap":"node_modules/react-bootstrap/es/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -42114,6 +42181,8 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 var _reactBootstrap = require("react-bootstrap");
 
 var _validator2 = _interopRequireWildcard(require("./validator"));
+
+var _summaryComponent = _interopRequireDefault(require("./summaryComponent"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42202,6 +42271,14 @@ function (_Component) {
         if (!valid) {
           student[key].valid = valid;
           student[key].errors = errors;
+        } else {
+          _reactDom.default.render(_react.default.createElement(_summaryComponent.default, {
+            Name: this.state.Name.value,
+            CellularPhone: this.state.CellularPhone.value,
+            HowDidYouReachedUs: this.state.HowDidYouReachedUs.value
+          }), document.querySelector("#simpleApp"));
+
+          console.log(this.state.Name.value);
         }
       }
 
@@ -42290,7 +42367,7 @@ function (_Component) {
 exports.default = App;
 
 _reactDom.default.render(_react.default.createElement(App, null), document.querySelector("#simpleApp"));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-bootstrap":"node_modules/react-bootstrap/es/index.js","./validator":"validator.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-bootstrap":"node_modules/react-bootstrap/es/index.js","./validator":"validator.js","./summaryComponent":"summaryComponent.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -42318,7 +42395,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56850" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57729" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

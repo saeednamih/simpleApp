@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import {  Button, Container, Row, Col } from "react-bootstrap";
 import { Form, InputGroup} from "react-bootstrap";
 import validator, { field } from './validator'; 
+
+import SummaryComponent from './summaryComponent'
 //phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 export default class App extends Component {
   constructor() {
@@ -39,6 +41,10 @@ export default class App extends Component {
         if(!valid){
             student[key].valid = valid;
             student[key].errors = errors;
+        }
+        else{
+        ReactDOM.render(<SummaryComponent Name={this.state.Name.value} CellularPhone={this.state.CellularPhone.value}  HowDidYouReachedUs={this.state.HowDidYouReachedUs.value} />,document.querySelector("#simpleApp"));
+       console.log(this.state.Name.value)
         }
     }
 

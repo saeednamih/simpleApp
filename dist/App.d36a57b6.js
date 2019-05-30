@@ -42210,7 +42210,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+// XXX-XXX-XXXX
+//XXX.XXX.XXXX
+//XXX XXX XXXX
 //phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+//==========================
+//XXX-XXXXXXX
+//phoneno = /^\(?([0-9]{3})\)?[-]?([0-9]{7})$/;
 var App =
 /*#__PURE__*/
 function (_Component) {
@@ -42231,7 +42237,7 @@ function (_Component) {
       CellularPhone: (0, _validator2.field)({
         value: '',
         name: 'CellularPhone',
-        pattern: /^\(?([0-9]{3})\)?[-]?([0-9]{3})[-. ]?([0-9]{4})$/
+        pattern: /^\(?([0-9]{3})\)?[-]([0-9]{7})$/
       }),
       HowDidYouReachedUs: (0, _validator2.field)({
         value: '',
@@ -42257,33 +42263,35 @@ function (_Component) {
   }, {
     key: "onSubmit",
     value: function onSubmit(e) {
-      var student = Object.assign({}, this.state);
+      var customer = Object.assign({}, this.state);
+      var check = true;
 
-      for (var key in student) {
-        var _student$key = student[key],
-            value = _student$key.value,
-            validations = _student$key.validations;
+      for (var key in customer) {
+        var _customer$key = customer[key],
+            value = _customer$key.value,
+            validations = _customer$key.validations;
 
         var _validator = (0, _validator2.default)(value, key, validations),
             valid = _validator.valid,
             errors = _validator.errors;
 
         if (!valid) {
-          student[key].valid = valid;
-          student[key].errors = errors;
-        } else {
-          _reactDom.default.render(_react.default.createElement(_summaryComponent.default, {
-            Name: this.state.Name.value,
-            CellularPhone: this.state.CellularPhone.value,
-            HowDidYouReachedUs: this.state.HowDidYouReachedUs.value
-          }), document.querySelector("#simpleApp"));
-
-          console.log(this.state.Name.value);
-        }
+          customer[key].valid = valid;
+          customer[key].errors = errors;
+          check = false;
+        } else {}
       }
 
-      this.setState(_objectSpread({}, student)); //Send data to somewhere 
+      this.setState(_objectSpread({}, customer)); //Send data to somewhere 
       //...
+
+      if (check == true) {
+        _reactDom.default.render(_react.default.createElement(_summaryComponent.default, {
+          Name: this.state.Name.value,
+          CellularPhone: this.state.CellularPhone.value,
+          HowDidYouReachedUs: this.state.HowDidYouReachedUs.value
+        }), document.querySelector("#simpleApp"));
+      }
 
       e.preventDefault();
     }
@@ -42395,7 +42403,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57729" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60555" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -6,13 +6,20 @@ import { Form, InputGroup} from "react-bootstrap";
 import validator, { field } from './validator'; 
 
 import SummaryComponent from './summaryComponent'
+// XXX-XXX-XXXX
+//XXX.XXX.XXXX
+//XXX XXX XXXX
 //phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+//==========================
+//XXX-XXXXXXX
+//phoneno = /^\(?([0-9]{3})\)?[-]?([0-9]{7})$/;
+
 export default class App extends Component {
   constructor() {
     super();
     this.state = {
       Name: field({value:'', name: 'Name', minLength: 2}),
-      CellularPhone:  field({value: '', name: 'CellularPhone', pattern: /^\(?([0-9]{3})\)?[-]?([0-9]{3})[-. ]?([0-9]{4})$/}),
+      CellularPhone:  field({value: '', name: 'CellularPhone', pattern: /^\(?([0-9]{3})\)?[-]([0-9]{7})$/}),
       HowDidYouReachedUs:   field({value: '', name: 'HowDidYouReachedUs'}),
     };
        this.onInputChange = this.onInputChange.bind(this);
@@ -31,26 +38,30 @@ export default class App extends Component {
   }
   onSubmit(e) {
     
-    const student = Object.assign({}, this.state);
-
-    for(let key in student){
-        const { value, validations } = student[key];
+    const customer = Object.assign({}, this.state);
+    let check=true;
+    for(let key in customer){
+        
+        const { value, validations } = customer[key];
 
         const { valid, errors } = validator(value, key, validations);
 
         if(!valid){
-            student[key].valid = valid;
-            student[key].errors = errors;
+            customer[key].valid = valid;
+            customer[key].errors = errors;
+            check=false;
         }
         else{
-        ReactDOM.render(<SummaryComponent Name={this.state.Name.value} CellularPhone={this.state.CellularPhone.value}  HowDidYouReachedUs={this.state.HowDidYouReachedUs.value} />,document.querySelector("#simpleApp"));
-       console.log(this.state.Name.value)
+      
         }
     }
 
-    this.setState({...student});
+    this.setState({...customer});
     //Send data to somewhere 
     //...
+    if(check==true){
+        ReactDOM.render(<SummaryComponent Name={this.state.Name.value} CellularPhone={this.state.CellularPhone.value}  HowDidYouReachedUs={this.state.HowDidYouReachedUs.value} />,document.querySelector("#simpleApp"));
+    }
     e.preventDefault();
   }
   render() {
